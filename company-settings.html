@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">>
+
+</head>
+<body>
+    <header class="crmEmpTopNav">
+
+        <div class="crmEmpLeftNav">
+
+            <button class="crmEmpMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="crmEmpLogoBox">
+                <i class="fa-solid fa-layer-group"></i>
+                <h2>Nexora</h2>
+            </div>
+
+        </div>
+
+        <div class="crmEmpRightNav">
+
+            <input type="text" placeholder="Search Employee..." class="crmEmpSearchBox">
+
+
+            <button class="crmEmpNotifyBtn" id="crmNotifyBtn">
+                <i class="fa-solid fa-bell"></i>
+            </button>
+
+
+
+            <div class="crmProfileWrap">
+
+                <button class="crmEmpProfileBtn" id="crmProfileBtn">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+
+                <div class="crmProfileMenu" id="crmProfileMenu">
+
+                    <a href="employee-profile.html">
+                        <i class="fa-solid fa-user"></i>
+                        My Profile
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        Settings
+                    </a>
+
+                    <a href="forgot.html">
+                        <i class="fa-solid fa-lock"></i>
+                        Change Password
+                    </a>
+
+                    <a href="#" onclick="logout()">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+
+
+    <aside class="crmEmpSideBar">
+
+        <ul class="crmEmpMenuList">
+
+            <li class="menu-title">MAIN</li>
+
+            <li><a href="index.html"><i class="fa-solid fa-gauge-high"></i> Dashboard</a></li>
+            <li><a href="leads.html"><i class="fa-solid fa-address-book"></i> Leads</a></li>
+            <li><a href="add-lead.html"><i class="fa-solid fa-user-plus"></i> Add Lead</a></li>
+            <li><a href="customers.html"><i class="fa-solid fa-users"></i> Customers</a></li>
+            <li><a href="employee-list.html"><i class="fa-solid fa-user-group"></i> Employee List</a></li>
+            <li><a href="task-list.html"><i class="fa-solid fa-list-check"></i> Task List</a></li>
+            <li><a href="employee-task.html"><i class="fa-solid fa-clipboard-check"></i> Employee Task</a></li>
+
+            <li class="menu-title">MANAGEMENT</li>
+
+            <li><a href="add-customer.html"><i class="fa-solid fa-user-plus"></i> Add Customer</a></li>
+            <li><a href="create-task.html"><i class="fa-solid fa-square-plus"></i> Create Task</a></li>
+            <li><a href="calendar.html"><i class="fa-solid fa-calendar-days"></i> Calendar</a></li>
+            <li><a href="meeting.html"><i class="fa-solid fa-handshake"></i> Meetings</a></li>
+            <li><a href="notifications.html"><i class="fa-solid fa-bell"></i> Notifications</a></li>
+            <li><a href="reports.html"><i class="fa-solid fa-chart-column"></i> Reports</a></li>
+
+            <li class="menu-title">PROFILE</li>
+
+            <li><a href="customer-profile.html"><i class="fa-solid fa-id-card"></i> Customer Profile</a></li>
+            <li><a href="employee-profile.html"><i class="fa-solid fa-user"></i> Employee Profile</a></li>
+            <li class="menu-title">SETTINGS</li>
+
+            <li><a href="profile.html">
+                    <i class="fa-solid fa-user"></i> Profile
+                </a></li>
+
+            <li><a href="account-settings.html">
+                    <i class="fa-solid fa-gear"></i> Account Settings
+                </a></li>
+
+            <li><a href="company-settings.html">
+                    <i class="fa-solid fa-building"></i> Company Settings
+                </a></li>
+
+            <li class="menu-title">ACCOUNT</li>
+
+            <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+            <li><a href="forgot.html"><i class="fa-solid fa-key"></i> Forgot Password</a></li>
+            <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+
+        </ul>
+    </aside>
+        
+
+
+        <main class="main">
+
+        <div class="crmEmpPageHeading">
+
+    <div>
+        <h2>Company Settings</h2>
+        <p>Manage company information, branding and system configuration.</p>
+    </div>
+
+    <button class="crmEmpAddBtn">
+        <i class="fa-solid fa-floppy-disk"></i>
+        Save Company
+    </button>
+
+</div>
+
+
+
+        <div class="crmCompanyGrid">
+
+            <div class="crmCompanyCard">
+
+                <h3>
+
+                    <i class="fa-solid fa-building"></i>
+
+                    Company Information
+
+                </h3>
+
+                <div class="crmLogoUpload">
+
+<img src="https://placehold.co/90x90/00bcd4/0f172a?text=NEXORA" class="company-logo" alt="Logo">
+                    <button>
+
+                        <i class="fa-solid fa-camera"></i>
+
+                        Change Logo
+
+                    </button>
+
+                </div>
+
+                <div class="crmInputGroup">
+
+                    <label>Company Name</label>
+
+                    <input type="text" value="Nexora CRM">
+
+                </div>
+
+                <div class="crmInputGroup">
+
+                    <label>Business Email</label>
+
+                    <input type="email" value="info@nexora.com">
+
+                </div>
+
+                <div class="crmInputGroup">
+
+                    <label>Phone Number</label>
+
+                    <input type="text" value="+92 300 1234567">
+
+                </div>
+
+                <div class="crmInputGroup">
+
+                    <label>Website</label>
+
+                    <input type="text" value="www.nexora.com">
+
+                </div>
+
+            </div>
+
+
+            <div class="crmCompanyCard">
+
+                <h3>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Office Details
+
+                </h3>
+
+                <div class="crmInputGroup">
+
+                    <label>Address</label>
+
+                    <textarea rows="4">Main Boulevard, Lahore</textarea>
+
+                </div>
+
+                <div class="crmInputGroup">
+
+                    <label>City</label>
+
+                    <input type="text" value="Lahore">
+
+                </div>
+
+                <div class="crmInputGroup">
+
+                    <label>Country</label>
+
+                    <select>
+
+                        <option>Pakistan</option>
+
+                        <option>UAE</option>
+
+                        <option>United Kingdom</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="crmCompanyCard">
+
+                <h3>
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    Business Settings
+
+                </h3>
+
+                <div class="crmInputGroup">
+
+                    <label>Industry</label>
+
+                    <select>
+
+                        <option>Software House</option>
+
+                        <option>Marketing</option>
+
+                        <option>Education</option>
+
+                    </select>
+
+                </div>
+
+                <div class="crmInputGroup">
+
+                    <label>Company Size</label>
+
+                    <select>
+
+                        <option>10-50 Employees</option>
+
+                        <option>50-100 Employees</option>
+
+                        <option>100+</option>
+
+                    </select>
+
+                </div>
+
+                <div class="crmInputGroup">
+
+                    <label>Founded Year</label>
+
+                    <input type="number" value="2024">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="crmCompanyCard">
+
+        <h3>
+            <i class="fa-solid fa-business-time"></i>
+            Working Hours
+        </h3>
+
+        <div class="crmInputGroup">
+            <label>Opening Time</label>
+            <input type="time" value="09:00">
+        </div>
+
+        <div class="crmInputGroup">
+            <label>Closing Time</label>
+            <input type="time" value="18:00">
+        </div>
+
+        <div class="crmInputGroup">
+            <label>Working Days</label>
+            <select>
+                <option>Monday - Friday</option>
+                <option>Monday - Saturday</option>
+                <option>24 / 7</option>
+            </select>
+        </div>
+
+    </div>
+
+
+
+    <div class="crmCompanyCard">
+
+        <h3>
+            <i class="fa-solid fa-money-bill-wave"></i>
+            Currency & Tax
+        </h3>
+
+        <div class="crmInputGroup">
+            <label>Currency</label>
+            <select>
+                <option>PKR</option>
+                <option>USD</option>
+                <option>AED</option>
+                <option>EUR</option>
+            </select>
+        </div>
+
+        <div class="crmInputGroup">
+            <label>Tax Percentage</label>
+            <input type="number" value="15">
+        </div>
+
+        <div class="crmInputGroup">
+            <label>Invoice Prefix</label>
+            <input type="text" value="INV-2026">
+        </div>
+
+    </div>
+
+
+
+    <div class="crmCompanyCard">
+
+        <h3>
+            <i class="fa-solid fa-share-nodes"></i>
+            Social Media
+        </h3>
+
+        <div class="crmInputGroup">
+            <label>Facebook</label>
+            <input type="text" placeholder="Facebook URL">
+        </div>
+
+        <div class="crmInputGroup">
+            <label>Instagram</label>
+            <input type="text" placeholder="Instagram URL">
+        </div>
+
+        <div class="crmInputGroup">
+            <label>LinkedIn</label>
+            <input type="text" placeholder="LinkedIn URL">
+        </div>
+
+        <div class="crmInputGroup">
+            <label>Twitter (X)</label>
+            <input type="text" placeholder="Twitter URL">
+        </div>
+
+    </div>
+
+
+    <div class="crmCompanyCard">
+
+        <h3>
+            <i class="fa-solid fa-palette"></i>
+            Branding
+        </h3>
+
+        <div class="crmInputGroup">
+            <label>Primary Color</label>
+            <input type="color" value="#00bcd4">
+        </div>
+
+        <div class="crmInputGroup">
+            <label>Secondary Color</label>
+            <input type="color" value="#1e293b">
+        </div>
+
+        <div class="crmInputGroup">
+            <label>Font Family</label>
+            <select>
+                <option>Poppins</option>
+                <option>Roboto</option>
+                <option>Inter</option>
+                <option>Montserrat</option>
+            </select>
+        </div>
+
+    </div>
+
+
+
+    <div class="crmCompanyCard">
+
+        <h3>
+            <i class="fa-solid fa-envelope"></i>
+            SMTP Configuration
+        </h3>
+
+        <div class="crmInputGroup">
+            <label>SMTP Host</label>
+            <input type="text" placeholder="smtp.gmail.com">
+        </div>
+
+        <div class="crmInputGroup">
+            <label>SMTP Port</label>
+            <input type="number" value="587">
+        </div>
+
+        <div class="crmInputGroup">
+            <label>SMTP Username</label>
+            <input type="text">
+        </div>
+
+        <div class="crmInputGroup">
+            <label>SMTP Password</label>
+            <input type="password">
+        </div>
+
+    </div>
+
+
+    <div class="crmCompanyCard">
+
+        <h3>
+            <i class="fa-solid fa-key"></i>
+            API Configuration
+        </h3>
+
+        <div class="crmInputGroup">
+            <label>Google API Key</label>
+            <input type="password" value="AIza*************">
+        </div>
+
+        <div class="crmInputGroup">
+            <label>Payment Gateway Key</label>
+            <input type="password" value="pk_live********">
+        </div>
+
+        <div class="crmInputGroup">
+            <label>CRM Secret Key</label>
+            <input type="password" value="****************">
+        </div>
+
+    </div>
+
+
+    <div class="crmCompanyCard">
+
+        <h3>
+            <i class="fa-solid fa-cloud"></i>
+            Cloud Storage
+        </h3>
+
+        <div class="crmStorageBox">
+
+            <h2>72%</h2>
+
+            <p>Storage Used</p>
+
+            <div class="crmStorageBar">
+                <div class="crmStorageFill"></div>
+            </div>
+
+            <small>72 GB Used of 100 GB</small>
+
+        </div>
+
+    </div>
+
+
+    <div class="crmCompanyCard">
+
+        <h3>
+            <i class="fa-solid fa-folder-open"></i>
+            Company Documents
+        </h3>
+
+        <div class="crmDocumentItem">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>Business License.pdf</span>
+            <button>View</button>
+        </div>
+
+        <div class="crmDocumentItem">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>Tax Certificate.pdf</span>
+            <button>Open</button>
+        </div>
+
+        <div class="crmDocumentItem">
+            <i class="fa-solid fa-file-signature"></i>
+            <span>Company Policy.pdf</span>
+            <button>View</button>
+        </div>
+
+    </div>
+
+
+
+    <div class="crmCompanyCard">
+
+        <h3>
+            <i class="fa-solid fa-building-user"></i>
+            Branch Offices
+        </h3>
+
+        <ul class="crmBranchList">
+
+            <li>Lahore Head Office</li>
+
+            <li>Karachi Branch</li>
+
+            <li>Islamabad Branch</li>
+
+            <li>Dubai Office</li>
+
+        </ul>
+
+    </div>
+
+    <div class="crmCompanyCard">
+
+        <h3>
+            <i class="fa-solid fa-chart-simple"></i>
+            Company Statistics
+        </h3>
+
+        <div class="crmCompanyStats">
+
+            <div class="crmCompanyStat">
+                <h2>250+</h2>
+                <p>Employees</p>
+            </div>
+
+            <div class="crmCompanyStat">
+                <h2>1,850</h2>
+                <p>Customers</p>
+            </div>
+
+            <div class="crmCompanyStat">
+                <h2>520</h2>
+                <p>Projects</p>
+            </div>
+
+            <div class="crmCompanyStat">
+                <h2>99%</h2>
+                <p>Client Satisfaction</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="crmCompanyCard">
+
+        <h3>
+            <i class="fa-solid fa-database"></i>
+            Backup Center
+        </h3>
+
+        <button class="crmCompanyBackup">
+            Create Backup
+        </button>
+
+        <button class="crmCompanyRestore">
+            Restore Backup
+        </button>
+
+        <button class="crmCompanyExport">
+            Export Data
+        </button>
+
+    </div>
+
+    <div class="crmCompanyCard crmDangerCard">
+
+        <h3>
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            Danger Zone
+        </h3>
+
+        <p>
+            These actions permanently affect your company account.
+        </p>
+
+        <div class="crmDangerButtons">
+
+            <button class="crmDeactivateBtn">
+                Disable Company
+            </button>
+
+            <button class="crmDeleteBtn">
+                Delete Company
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="crmCompanyFooter">
+
+        <button class="crmCompanySaveBtn">
+            <i class="fa-solid fa-floppy-disk"></i>
+            Save Changes
+        </button>
+
+        <button class="crmResetChanges">
+            <i class="fa-solid fa-rotate"></i>
+            Reset
+        </button>
+
+    </div>
+    </main>
+    <footer class="crmFooter">
+    <p>© 2026 Nexora CRM. All rights reserved.</p>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>

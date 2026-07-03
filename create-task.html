@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Task</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+
+    <header class="crmEmpTopNav">
+
+        <div class="crmEmpLeftNav">
+
+            <button class="crmEmpMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="crmEmpLogoBox">
+                <i class="fa-solid fa-layer-group"></i>
+                <h2>Nexora</h2>
+            </div>
+
+        </div>
+
+        <div class="crmEmpRightNav">
+
+            <input type="text" placeholder="Search Employee..." class="crmEmpSearchBox">
+
+            <div class="crmEmpRightNav">
+
+
+                <button class="crmEmpNotifyBtn" id="crmNotifyBtn">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+
+
+                <div class="crmProfileWrap">
+
+                    <button class="crmEmpProfileBtn" id="crmProfileBtn">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+
+                    <div class="crmProfileMenu" id="crmProfileMenu">
+
+                        <a href="employee-profile.html">
+                            <i class="fa-solid fa-user"></i>
+                            My Profile
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-solid fa-gear"></i>
+                            Settings
+                        </a>
+
+                        <a href="forgot.html">
+                            <i class="fa-solid fa-lock"></i>
+                            Change Password
+                        </a>
+
+                        <a href="#" onclick="logout()">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Logout
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+    </header>
+
+
+
+    <aside class="crmEmpSideBar">
+
+        <ul class="crmEmpMenuList">
+
+            <li class="menu-title">MAIN</li>
+
+            <li><a href="index.html"><i class="fa-solid fa-gauge-high"></i> Dashboard</a></li>
+            <li><a href="leads.html"><i class="fa-solid fa-address-book"></i> Leads</a></li>
+            <li><a href="add-lead.html"><i class="fa-solid fa-user-plus"></i> Add Lead</a></li>
+            <li><a href="customers.html"><i class="fa-solid fa-users"></i> Customers</a></li>
+            <li><a href="employee-list.html"><i class="fa-solid fa-user-group"></i> Employee List</a></li>
+            <li><a href="task-list.html"><i class="fa-solid fa-list-check"></i> Task List</a></li>
+            <li><a href="employee-task.html"><i class="fa-solid fa-clipboard-check"></i> Employee Task</a></li>
+
+            <li class="menu-title">MANAGEMENT</li>
+
+            <li><a href="add-customer.html"><i class="fa-solid fa-user-plus"></i> Add Customer</a></li>
+            <li><a href="create-task.html"><i class="fa-solid fa-square-plus"></i> Create Task</a></li>
+            <li><a href="calendar.html"><i class="fa-solid fa-calendar-days"></i> Calendar</a></li>
+            <li><a href="meeting.html"><i class="fa-solid fa-handshake"></i> Meetings</a></li>
+            <li><a href="notifications.html"><i class="fa-solid fa-bell"></i> Notifications</a></li>
+            <li><a href="reports.html"><i class="fa-solid fa-chart-column"></i> Reports</a></li>
+
+            <li class="menu-title">PROFILE</li>
+
+            <li><a href="customer-profile.html"><i class="fa-solid fa-id-card"></i> Customer Profile</a></li>
+            <li><a href="employee-profile.html"><i class="fa-solid fa-user"></i> Employee Profile</a></li>
+            <li class="menu-title">SETTINGS</li>
+
+            <li><a href="profile.html">
+                    <i class="fa-solid fa-user"></i> Profile
+                </a></li>
+
+            <li><a href="account-settings.html">
+                    <i class="fa-solid fa-gear"></i> Account Settings
+                </a></li>
+
+            <li><a href="company-settings.html">
+                    <i class="fa-solid fa-building"></i> Company Settings
+                </a></li>
+
+            <li class="menu-title">ACCOUNT</li>
+
+            <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+            <li><a href="forgot.html"><i class="fa-solid fa-key"></i> Forgot Password</a></li>
+            <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+
+        </ul>
+    </aside>
+    <main class="main">
+
+        <div class="crmEmpPageHeading">
+
+            <div>
+
+                <h1>Create New Task</h1>
+
+                <p>Create and assign tasks to employees professionally.</p>
+
+            </div>
+
+            <button class="crmEmpAddBtn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Save Task
+
+            </button>
+
+        </div>
+
+        <section class="crmCreateTaskBox">
+
+            <form class="crmCreateTaskForm">
+
+                <div class="crmCreateTaskGrid">
+
+                    <div class="crmCreateInput">
+
+                        <label>Task Name</label>
+
+                        <input type="text" placeholder="Enter Task Name">
+
+                    </div>
+
+                    <div class="crmCreateInput">
+
+                        <label>Assign Employee</label>
+
+                        <select>
+
+                            <option>Select Employee</option>
+
+                            <option>Ali Khan</option>
+
+                            <option>Ayesha Malik</option>
+
+                            <option>Ahmed Raza</option>
+
+                            <option>Fatima Noor</option>
+
+                        </select>
+
+                    </div>
+                    <div class="crmCreateInput">
+
+                        <label>Priority</label>
+
+                        <select>
+
+                            <option>Select Priority</option>
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="crmCreateInput">
+
+                        <label>Status</label>
+
+                        <select>
+
+                            <option>Pending</option>
+                            <option>In Progress</option>
+                            <option>Completed</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="crmCreateInput">
+
+                        <label>Due Date</label>
+
+                        <input type="date">
+
+                    </div>
+
+                    <div class="crmCreateInput">
+
+                        <label>Project Name</label>
+
+                        <input type="text" placeholder="CRM Management System">
+
+                    </div>
+
+                </div>
+
+                <div class="crmCreateInput">
+
+                    <label>Task Description</label>
+
+                    <textarea rows="6" placeholder="Write task details here..."></textarea>
+
+                </div>
+
+                <div class="crmCreateInput">
+
+                    <label>Upload Attachment</label>
+
+                    <input type="file">
+
+                </div>
+
+                <div class="crmCreateBtnGroup">
+
+                    <button type="submit" class="crmCreateSaveBtn">
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+
+                        Create Task
+
+                    </button>
+
+                    <button type="reset" class="crmCreateResetBtn">
+
+                        <i class="fa-solid fa-rotate-left"></i>
+
+                        Reset
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <section class="crmCreateRecentBox">
+
+            <h2>Recently Created Tasks</h2>
+
+            <div class="crmCreateRecentCard">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                <div>
+
+                    <h4>CRM Dashboard Design</h4>
+
+                    <p>Assigned to Ali Khan • Due: 20 July</p>
+
+                </div>
+
+            </div>
+
+            <div class="crmCreateRecentCard">
+
+                <i class="fa-solid fa-code"></i>
+
+                <div>
+
+                    <h4>Employee Management Module</h4>
+
+                    <p>Assigned to Ahmed Raza • Due: 24 July</p>
+
+                </div>
+
+            </div>
+
+            <div class="crmCreateRecentCard">
+
+                <i class="fa-solid fa-mobile-screen"></i>
+
+                <div>
+
+                    <h4>Responsive Testing</h4>
+
+                    <p>Assigned to Ayesha Malik • Due: 28 July</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="crmCreateTipsBox">
+
+            <h2>Task Guidelines</h2>
+
+            <ul>
+
+                <li>✔ Assign tasks to the correct employee.</li>
+
+                <li>✔ Select an appropriate priority level.</li>
+
+                <li>✔ Set a realistic deadline.</li>
+
+                <li>✔ Add a clear description for every task.</li>
+
+                <li>✔ Upload related files if required.</li>
+
+            </ul>
+
+        </section>
+
+    </main>
+<footer class="crmFooter">
+    <p>© 2026 Nexora CRM. All rights reserved.</p>
+</footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+    
+
+<header class="crmEmpTopNav">
+
+<div class="crmEmpLeftNav">
+
+<button class="crmEmpMenuBtn">
+<i class="fa-solid fa-bars"></i>
+</button>
+
+<div class="crmEmpLogoBox">
+<i class="fa-solid fa-layer-group"></i>
+<h2>Nexora</h2>
+</div>
+
+</div>
+
+<div class="crmEmpRightNav">
+
+<input type="text"
+placeholder="Search Task..."
+class="crmEmpSearchBox">
+
+<button class="crmEmpNotifyBtn" id="crmNotifyBtn">
+<i class="fa-solid fa-bell"></i>
+</button>
+
+<div class="crmProfileWrap">
+
+<button class="crmEmpProfileBtn" id="crmProfileBtn">
+<i class="fa-solid fa-user"></i>
+</button>
+
+<div class="crmProfileMenu" id="crmProfileMenu">
+
+<a href="employee-profile.html">
+<i class="fa-solid fa-user"></i>
+My Profile
+</a>
+
+<a href="#">
+<i class="fa-solid fa-gear"></i>
+Settings
+</a>
+
+<a href="forgot.html">
+<i class="fa-solid fa-lock"></i>
+Change Password
+</a>
+
+<a href="#" onclick="logout()">
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+<aside class="crmEmpSideBar">
+
+<ul class="crmEmpMenuList">
+
+<li class="menu-title">MAIN</li>
+
+<li><a href="index.html"><i class="fa-solid fa-gauge-high"></i> Dashboard</a></li>
+<li><a href="leads.html"><i class="fa-solid fa-address-book"></i> Leads</a></li>
+<li><a href="add-lead.html"><i class="fa-solid fa-user-plus"></i> Add Lead</a></li>
+<li><a href="customers.html"><i class="fa-solid fa-users"></i> Customers</a></li>
+<li><a href="employee-list.html"><i class="fa-solid fa-user-group"></i> Employee List</a></li>
+
+<li class="crmEmpActivePage">
+<a href="task-list.html">
+<i class="fa-solid fa-list-check"></i> Task List
+</a>
+</li>
+
+<li><a href="employee-task.html"><i class="fa-solid fa-clipboard-check"></i> Employee Task</a></li>
+
+<li class="menu-title">MANAGEMENT</li>
+
+<li><a href="add-customer.html"><i class="fa-solid fa-user-plus"></i> Add Customer</a></li>
+<li><a href="create-task.html"><i class="fa-solid fa-square-plus"></i> Create Task</a></li>
+<li><a href="calendar.html"><i class="fa-solid fa-calendar-days"></i> Calendar</a></li>
+<li><a href="meeting.html"><i class="fa-solid fa-handshake"></i> Meetings</a></li>
+<li><a href="notifications.html"><i class="fa-solid fa-bell"></i> Notifications</a></li>
+<li><a href="reports.html"><i class="fa-solid fa-chart-column"></i> Reports</a></li>
+
+<li class="menu-title">PROFILE</li>
+
+<li><a href="customer-profile.html"><i class="fa-solid fa-id-card"></i> Customer Profile</a></li>
+<li><a href="employee-profile.html"><i class="fa-solid fa-user"></i> Employee Profile</a></li>
+<li class="menu-title">SETTINGS</li>
+
+            <li><a href="profile.html">
+                    <i class="fa-solid fa-user"></i> Profile
+                </a></li>
+
+            <li><a href="account-settings.html">
+                    <i class="fa-solid fa-gear"></i> Account Settings
+                </a></li>
+
+            <li><a href="company-settings.html">
+                    <i class="fa-solid fa-building"></i> Company Settings
+                </a></li>
+
+<li class="menu-title">ACCOUNT</li>
+
+<li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+<li><a href="forgot.html"><i class="fa-solid fa-key"></i> Forgot Password</a></li>
+<li><a href="#" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+
+</ul>
+
+</aside>
+
+
+
+<div class="main">
+
+<div class="crmDashboardHeader">
+
+<div>
+
+<span class="crmDashboardTag">TASK MANAGEMENT</span>
+
+<h1>Task List</h1>
+
+<p>Manage all assigned tasks and monitor their progress.</p>
+
+</div>
+
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <i class="fa-solid fa-list-check"></i>
+        <h3>Total Tasks</h3>
+        <h2>120</h2>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-spinner"></i>
+        <h3>In Progress</h3>
+        <h2>38</h2>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-circle-check"></i>
+        <h3>Completed</h3>
+        <h2>70</h2>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-clock"></i>
+        <h3>Pending</h3>
+        <h2>12</h2>
+    </div>
+
+</div>
+
+
+<div class="activity-box">
+
+<h2>Task List</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Task</th>
+
+<th>Employee</th>
+
+<th>Priority</th>
+
+<th>Status</th>
+
+<th>Deadline</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Website Design</td>
+
+<td>Ali Khan</td>
+
+<td><span class="danger">High</span></td>
+
+<td><span class="pending">In Progress</span></td>
+
+<td>05 Jul 2026</td>
+
+</tr>
+
+<tr>
+
+<td>CRM Testing</td>
+
+<td>Sara Ahmed</td>
+
+<td><span class="success">Low</span></td>
+
+<td><span class="success">Completed</span></td>
+
+<td>04 Jul 2026</td>
+
+</tr>
+
+<tr>
+
+<td>Client Meeting</td>
+
+<td>Usman</td>
+
+<td><span class="pending">Medium</span></td>
+
+<td><span class="pending">Pending</span></td>
+
+<td>07 Jul 2026</td>
+
+</tr>
+
+<tr>
+
+<td>Bug Fixing</td>
+
+<td>Ayesha</td>
+
+<td><span class="danger">High</span></td>
+
+<td><span class="pending">In Progress</span></td>
+
+<td>08 Jul 2026</td>
+
+</tr>
+
+<tr>
+
+<td>Database Update</td>
+
+<td>Ahmed</td>
+
+<td><span class="success">Low</span></td>
+
+<td><span class="success">Completed</span></td>
+
+<td>10 Jul 2026</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="crmTaskPagination">
+
+    <button class="crmPageBtn">
+        <i class="fa-solid fa-angle-left"></i> Previous
+    </button>
+
+    <button class="crmPageBtn active">1</button>
+    <button class="crmPageBtn">2</button>
+    <button class="crmPageBtn">3</button>
+
+    <button class="crmPageBtn">
+        Next <i class="fa-solid fa-angle-right"></i>
+    </button>
+
+</div>
+
+
+<div class="cards">
+
+    <div class="card">
+        <i class="fa-solid fa-square-plus"></i>
+        <h3>Create Task</h3>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-user-check"></i>
+        <h3>Assign Task</h3>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Task Report</h3>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-download"></i>
+        <h3>Export Tasks</h3>
+    </div>
+
+</div>
+
+</div> 
+<footer class="crmFooter">
+    <p>© 2026 Nexora CRM. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
